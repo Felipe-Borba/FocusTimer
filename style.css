@@ -29,6 +29,10 @@ button {
   cursor: pointer;
 }
 
+.timer {
+  margin-bottom: 1rem;
+}
+
 .timer span {
   font-family: "Roboto";
   font-style: normal;
