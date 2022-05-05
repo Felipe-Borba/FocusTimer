@@ -33,6 +33,10 @@ button {
   margin-bottom: 1rem;
 }
 
+.timer:hover {
+  cursor: pointer;
+}
+
 .timer span {
   font-family: "Roboto";
   font-style: normal;
