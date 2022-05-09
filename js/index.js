@@ -1,6 +1,8 @@
 import element from "./elements.js";
 import chronometer from "./chronometer.js";
+import { musics } from "./musics.js";
 const timer = chronometer(element);
+const music = musics();
 
 element.timerBox.addEventListener("click", () => {
   const input = prompt("digite os minutos");
@@ -29,48 +31,18 @@ element.buttonMinus.addEventListener("click", () => {
   timer.increaseMinutes(-5);
 });
 
-music().play("coffee");
+element.buttonNature.addEventListener("click", () => {
+  music.play("forest");
+});
 
-function music() {
-  const audioKitchenTimer = new Audio(
-    "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true"
-  );
-  const audioForest = new Audio(
-    "https://drive.google.com/file/d/1CRHkV72WUMdcqec5GT_KdsqFz0z3VAOA/view/" //rota quebrada?
-  );
-  const audioRain = new Audio(
-    "https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view"
-  );
-  const audioCoffee = new Audio("sounds/Cafeteria.wav");
-  const audioFirePit = new Audio(
-    "https://drive.google.com/file/d/1MakaBPxJvTa_whaSM3kEbRcxiVd1GRCB/view"
-  );
+element.buttonFireplace.addEventListener("click", () => {
+  music.play("firePit");
+});
 
-  audioKitchenTimer.loop = true;
-  audioForest.loop = true;
-  audioRain.loop = true;
-  audioCoffee.loop = true;
-  audioFirePit.loop = true;
+element.buttonCoffee.addEventListener("click", () => {
+  music.play("coffee");
+});
 
-  const musics = new Map([
-    ["kitchenTimer", audioKitchenTimer],
-    ["forest", audioForest],
-    ["rain", audioRain],
-    ["coffee", audioCoffee],
-    ["firePit", audioFirePit],
-  ]);
-
-  function play(musicName) {
-    musics.forEach((value, key) => {
-      if (key === musicName) {
-        value.play();
-      } else {
-        value.stop();
-      }
-    });
-  }
-
-  return {
-    play,
-  };
-}
+element.buttonRain.addEventListener("click", () => {
+  music.play("rain");
+});
