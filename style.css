@@ -85,3 +85,23 @@ button {
 .selected svg path {
   fill: white
 }
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.light-mode {
+  background: none;
+  margin: 6rem;
+}
+
+.dark-mode {
+  background: none;
+  margin: 6.2rem;
+}
+
+.hide {
+  display: none;
+}
