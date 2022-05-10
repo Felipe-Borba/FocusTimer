@@ -3,6 +3,7 @@ import chronometer from "./chronometer.js";
 import { musics } from "./musics.js";
 const timer = chronometer(element);
 const music = musics();
+timer.setTimeOverCallback(() => music.play("kitchenTimer"));
 
 element.timerBox.addEventListener("click", () => {
   const input = prompt("digite os minutos");
@@ -32,22 +33,22 @@ element.buttonMinus.addEventListener("click", () => {
 });
 
 element.buttonNature.addEventListener("click", () => {
-  music.play("forest");
+  music.play("forest").loop = true;
   selectOneBtn(element.buttonNature);
 });
 
 element.buttonFireplace.addEventListener("click", () => {
-  music.play("firePit");
+  music.play("firePit").loop = true;
   selectOneBtn(element.buttonFireplace);
 });
 
 element.buttonCoffee.addEventListener("click", () => {
-  music.play("coffee");
+  music.play("coffee").loop = true;
   selectOneBtn(element.buttonCoffee);
 });
 
 element.buttonRain.addEventListener("click", () => {
-  music.play("rain");
+  music.play("rain").loop = true;
   selectOneBtn(element.buttonRain);
 });
 

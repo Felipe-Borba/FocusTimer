@@ -1,5 +1,6 @@
 export default function chronometer(element) {
   let timerTimeOut;
+  let timeOverCallback = () => {};
 
   function setMinutes(number) {
     if (typeof number === "number") {
@@ -53,7 +54,7 @@ export default function chronometer(element) {
   function countDown() {
     timerTimeOut = setTimeout(() => {
       if (isTimeOver()) {
-        console.log("cabou");
+        timeOverCallback();
         stop();
         return;
       }
@@ -75,12 +76,17 @@ export default function chronometer(element) {
       setMinutes(minute);
     }
   }
-  
+
+  function setTimeOverCallback(call) {
+    timeOverCallback = call;
+  }
+
   return {
     setupTimer,
     countDown,
     decreaseTime,
     stop,
     increaseMinutes,
+    setTimeOverCallback,
   };
 }
