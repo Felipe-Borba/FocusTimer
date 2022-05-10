@@ -79,5 +79,9 @@ button {
 }
 
 .selected {
-  background-color: aqua !important;
+  background-color: #02799D !important;
+}
+
+.selected svg path {
+  fill: white
 }
