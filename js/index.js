@@ -3,7 +3,22 @@ import chronometer from "./chronometer.js";
 import { musics } from "./musics.js";
 const timer = chronometer(element);
 const music = musics();
-timer.setTimeOverCallback(() => music.play("kitchenTimer"));
+
+timer.setTimeOverCallback(() => {
+  removeSelectedClass();
+  music.play("kitchenTimer");
+});
+
+function selectOneBtn(btn) {
+  removeSelectedClass();
+  btn.classList.add("selected");
+}
+
+function removeSelectedClass() {
+  Object.entries(element).map((ele) => {
+    ele[1].classList.remove("selected");
+  });
+}
 
 element.timerBox.addEventListener("click", () => {
   const input = prompt("digite os minutos");
@@ -51,10 +66,3 @@ element.buttonRain.addEventListener("click", () => {
   music.play("rain").loop = true;
   selectOneBtn(element.buttonRain);
 });
-
-function selectOneBtn(btn) {
-  Object.entries(element).map((ele) => {
-    ele[1].classList.remove("selected");
-  });
-  btn.classList.add("selected");
-}
