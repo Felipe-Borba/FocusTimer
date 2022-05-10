@@ -77,3 +77,7 @@ button {
 .sounds button:hover {
   background-color: #c2c2c5f3;
 }
+
+.selected {
+  background-color: aqua !important;
+}

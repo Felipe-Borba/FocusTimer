@@ -75,7 +75,7 @@ export default function chronometer(element) {
       setMinutes(minute);
     }
   }
-
+  
   return {
     setupTimer,
     countDown,

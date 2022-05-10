@@ -33,16 +33,27 @@ element.buttonMinus.addEventListener("click", () => {
 
 element.buttonNature.addEventListener("click", () => {
   music.play("forest");
+  selectOneBtn(element.buttonNature);
 });
 
 element.buttonFireplace.addEventListener("click", () => {
   music.play("firePit");
+  selectOneBtn(element.buttonFireplace);
 });
 
 element.buttonCoffee.addEventListener("click", () => {
   music.play("coffee");
+  selectOneBtn(element.buttonCoffee);
 });
 
 element.buttonRain.addEventListener("click", () => {
   music.play("rain");
+  selectOneBtn(element.buttonRain);
 });
+
+function selectOneBtn(btn) {
+  Object.entries(element).map((ele) => {
+    ele[1].classList.remove("selected");
+  });
+  btn.classList.add("selected");
+}
