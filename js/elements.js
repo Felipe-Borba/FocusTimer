@@ -12,6 +12,10 @@ const buttonRain = document.querySelector("#rain");
 const buttonCoffee = document.querySelector("#coffee");
 const buttonFireplace = document.querySelector("#fireplace");
 
+const buttonLightMode = document.querySelector(".light-mode");
+const buttonDarkMode = document.querySelector(".dark-mode");
+const root = document.querySelector(":root");
+
 export default {
   timerBox,
   timerMinutes,
@@ -24,4 +28,7 @@ export default {
   buttonRain,
   buttonCoffee,
   buttonFireplace,
+  buttonLightMode,
+  buttonDarkMode,
+  root,
 };

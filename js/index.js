@@ -31,6 +31,18 @@ element.timerBox.addEventListener("click", () => {
   }
 });
 
+element.buttonLightMode.addEventListener('click', () => {
+  element.buttonLightMode.classList.add("hide");
+  element.buttonDarkMode.classList.remove("hide");
+  element.root.classList.add('dark')
+})
+
+element.buttonDarkMode.addEventListener("click", () => {
+  element.buttonDarkMode.classList.add("hide");
+  element.buttonLightMode.classList.remove("hide");
+  element.root.classList.remove("dark");
+});
+
 element.buttonPlay.addEventListener("click", () => {
   timer.countDown();
 });
