@@ -16,6 +16,11 @@ const buttonLightMode = document.querySelector(".light-mode");
 const buttonDarkMode = document.querySelector(".dark-mode");
 const root = document.querySelector(":root");
 
+const inputNatureVolume = document.querySelector("#nature-volume");
+const inputRainVolume = document.querySelector("#rain-volume");
+const inputCoffeeVolume = document.querySelector("#coffee-volume");
+const inputFirePlaceVolume = document.querySelector("#fireplace-volume");
+
 export default {
   timerBox,
   timerMinutes,
@@ -31,4 +36,8 @@ export default {
   buttonLightMode,
   buttonDarkMode,
   root,
+  inputNatureVolume,
+  inputRainVolume,
+  inputCoffeeVolume,
+  inputFirePlaceVolume,
 };

@@ -74,8 +74,6 @@ path {
 }
 
 .sounds {
-  max-width: 40rem;
-
   display: grid;
   grid-template-areas:
     "A B"
@@ -87,8 +85,15 @@ path {
 .sounds button {
   background-color: var(--color-sound-btn-bg);
   border-radius: 2.5rem;
-  padding: 4.5rem;
+
+  width: 138px;
+  height: 152px;
   transition: color 100ms;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sounds button:hover {
@@ -101,10 +106,16 @@ path {
 
 .selected {
   background-color: var(--color-sound-btn-selected) !important;
+  --color-font: white
 }
 
 .selected path {
   fill: var(--color-sound-btn-selected-font);
+}
+
+.volume {
+  margin: 3.8rem auto 0;
+  width: 9rem;
 }
 
 header {
