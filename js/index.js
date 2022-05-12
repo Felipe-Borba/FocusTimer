@@ -60,21 +60,33 @@ element.buttonMinus.addEventListener("click", () => {
 });
 
 element.buttonNature.addEventListener("click", () => {
-  music.play("forest").loop = true;
+  const sound = music.play("forest")
+  sound.loop = true;
+  sound.volume = element.inputNatureVolume.value;
+  
   selectOneBtn(element.buttonNature);
 });
 
 element.buttonFireplace.addEventListener("click", () => {
-  music.play("firePit").loop = true;
+  const sound = music.play("firePit")
+  sound.loop = true;
+  sound.volume = element.inputFirePlaceVolume.value;
+
   selectOneBtn(element.buttonFireplace);
 });
 
 element.buttonCoffee.addEventListener("click", () => {
-  music.play("coffee").loop = true;
+  const sound = music.play("coffee")
+  sound.loop = true;
+  sound.volume = element.inputCoffeeVolume.value;
+
   selectOneBtn(element.buttonCoffee);
 });
 
 element.buttonRain.addEventListener("click", () => {
-  music.play("rain").loop = true;
+  const sound = music.play("rain")
+  sound.loop = true;
+  sound.volume = element.inputRainVolume.value;
+
   selectOneBtn(element.buttonRain);
 });
