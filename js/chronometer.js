@@ -44,7 +44,7 @@ export default function chronometer(element) {
     const minute = getMinutes();
 
     if (second <= 0) {
-      setSeconds(6);
+      setSeconds(60);
       setMinutes(minute - 1);
     } else {
       setSeconds(second - 1);
